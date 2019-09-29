@@ -33,7 +33,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email format should accept valid email address" do
-    valid_addresses = %w[example@xampe.com FAKSDFee@bar.foo amerai.brib@com.ca A_US@mail.com]
+    valid_addresses = %w[example@xampe.com FAKSDFee@bar.foo amerai.brib@com.ca 
+                          bar334jk@com.vn A_US@mail.com]
     valid_addresses.each do |email|
       @user.email = email
       assert @user.valid?, "#{email.inspect} address should be valid"
@@ -42,7 +43,7 @@ class UserTest < ActiveSupport::TestCase
   
   test "email format should not accept invalid email address" do
     invalid_addresses = %w[sfjlkf.com AFf@sdjlkf..com foo@bar_bar.com bar@bar+bar.com 
-                           bar@baar.com. bar334jk@com.vn]
+                           bar@baar.com.]
     invalid_addresses.each do |email|
     @user.email = email
     assert_not @user.valid?, "#{email.inspect} should not be valid"
