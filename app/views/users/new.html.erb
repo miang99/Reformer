@@ -2,15 +2,15 @@
 <form action="/users" method="post">
   <div>
     <label for="email">Email: </label>
-    <input type="email" name="email">
+    <input type="email" name="user[email]">
   </div>
   <div>
     <label for="username">Username: </label>
-    <input type="text" name="username">
+    <input type="text" name="user[username]">
   </div>
   <div>
     <label for="password">Password: </label>
-    <input type="password" name="password">
+    <input type="password" name="user[password]">
   </div>
   <div>
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>%"></div>
