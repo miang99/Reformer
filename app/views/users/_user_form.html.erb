@@ -40,5 +40,5 @@
   <%= f.text_field :email %> <br>
   Password: 
   <%= f.text_field :password %> <br>
-  <%= f.submit "Create" %>
+  <%= f.submit "#{yield(:submit)}" %>
 <% end %>
